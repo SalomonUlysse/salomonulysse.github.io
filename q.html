@@ -12,20 +12,30 @@
     
     <body style="background-color: black;">
         <!-- All this does is call the animation function. -->
-        <button class="buttons" onclick="document.location.href='index.html'"><span style="color: white;">Home</span></button>
-        <button class="buttons" onclick="document.location.href='CS Resume 7-11-2020.pdf'"><span style="color: white;">Resume</span></button><!--Open resume file-->        
-        <button class="buttons" onclick="document.location.href='projects.html'"><span style="color: white;">My projects</span></button><!--Open projects html-->
-        <button class="buttons"><a href="#contact" style="text-decoration: none; color: white;">Contact</a></button>
+        <a class="buttons" href='index.html'><span style="color: white;">Home</span></a>
+        <a class="buttons" href='CS Resume 7-11-2020.pdf'><span style="color: white;">Resume</span></a><!--Open resume file-->        
+        <a class="buttons" href='projects.html'><span style="color: white;">My projects</span></a><!--Open projects html-->
+        <a class="buttons" href="#contact" style="text-decoration: none; color: white;">Contact</a></button>
         <br>
         <canvas id="canvas" width="1000" height="1000" >
             <img id="sheet"src ="img/sprite.png" onkeydown="walk()" onclick="animateScript()" onkeyup="stop()" onload="stop()" >
         </canvas>
         <script src="q.js"></script>
         
+        <footer>
+            <address id="contact" style="color: white;">
+                <div id="email">
+                    Email me at
+                    <a href="mailto:sulysse1@umbc.edu">sulysse1@umbc.edu</a>
+                </div>
+                <div id="phone">
+                    Call me at
+                    <a href="tel:2404418684">(240) 441-8684</a>
+                </div>
+                <p>
+                    Thank you for your time!
+                </p>
+            </address>
+        </footer>
 </body>
-<footer id="contact" style="color: white;">
-    <div id="email">Email me at: sulysse1@umbc.edu </div>
-    <div id="phone">Call me at: 240-441-8684</div>
-    <div>Thank you for your time! </div>
-</footer>
 </html>
