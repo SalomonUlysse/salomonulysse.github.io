@@ -1,18 +1,46 @@
 .theme
 {
-    
-    font-family: sans-serif;
+    /*These two go together.*/
+    background-image: url("img/background.gif");
+    background-size: cover;
+    color: white;
+    background-color: #2C2F33;    
+    font-weight:900;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
 
-.buttons
+#title
 {
+    background-color: black;
+    align-items: center;
+    display: grid;
+    grid-gap: 10em;
+    color: white;
     padding: 10px;
     font-size: smaller;
     border-style: ridge;
     border-radius: 8px;
     border-color: black;
-    background-color: transparent;
+    height: auto;
+    width:auto;
+    vertical-align: auto;
+    margin-top: inherit;
+    text-decoration: none;
+}
+
+.buttons
+{
+    background-color: black;
+    align-items: center;
+    display: grid;
+    grid-gap: 10em;
+    color: white;
+    padding: 10px;
+    font-size: smaller;
+    border-style: ridge;
+    border-radius: 8px;
+    border-color: black;
     height: auto;
     width:auto;
     vertical-align: auto;
@@ -22,10 +50,12 @@
     
 }
 
-#contact
+#footer
 {
 
+    color:white;
 }
+
 .buttons:hover
 {
     background-color: gray;
@@ -33,21 +63,6 @@
 
 }
 
-#resume
-{
-    
-
-
-}
-
-#projects
-{
-
-}
-
-#projects:hover
-{
-}
 
 #resume:hover
 {
@@ -55,73 +70,68 @@
     opacity: 0.7;
 }
 
+.label
+{
+    background-color: black;
+    border:solid;
+    border-color: black;
+    border-radius: 8px;
+    /* display:grid; */
+    /* border-color: black; */
+
+}
 
 .grid-item
 {
-
+    background-color: black;
     border:solid;
     /* display:grid; */
     /* border-color: black; */
 
 }
 
-
-
 .projectbox
 {   
-    display: table-cell;
-    margin: auto;
-    margin-right: 20em;
-    text-align: center;
+
+    background-color: black;
+    flex: 1 0 21%;
     border:solid;
-    border-color: black;
-    width: fit-content;
-    border-radius: 8px;
+    border-color:white;
+    /* justify-items: left; */
+    border-radius: 8px; 
+    height: 25%;
+    width: 50%;
+    
 }
 
 #projects
 {
+    grid-gap: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: flex-start; */
+    justify-content: space-evenly;
 
 }
 
-.imgdisgen
+.img
 {
-    
+    width:fit-content;
+    margin: auto;
     max-width: 100%;
     max-height: 100%;
     
-}
-
-.imgpokemon
-{
-    
-    max-width: 100%;
-    max-height: 100%;
-    
-}
-
-
-.imgfirstplugin
-{
-    max-width: 100%;
-    max-height: 100%;
-    
-}
-
-#showmatrix
-{
-    font-family: fantasy;
-
-}
-
-#listfilters
-{
-    font-family: fantasy;
-
 }
 
 #description.divdescription
 {
     font-size: 0.1em;
     font-family: sans-serif;
+}
+
+#contact
+{
+    border: solid;
+    border-color: white;
+    background-color: black;
 }

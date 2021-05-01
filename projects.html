@@ -1,94 +1,46 @@
 
 <!DOCTYPE html>
 <html lang="en" class="theme">
-    <head>
+    <header>
 
         <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> -->
     <link href="portfolio.css" rel="stylesheet" type="text/css"> 
-    <div>
+    <div class ="buttonbox">
         <a class="buttons" href='index.html'>Home</a>
-        <a class="buttons" href='CS Resume 7-11-2020.pdf'>Resume</a>
-        <a class ="buttons" href="#contact" style="text-decoration: none;" style="color: black;">Contact</a>
+        <a class="buttons" href='CS Resume.pdf'>Resume</a>
+        <a class ="buttons" href="#contact" style="text-decoration: none;">Contact</a>
         <a class ="buttons" href='q.html'>???</a><!--???-->
         <br>
     </div>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
-    </head>
+    </header>
     <br>
-
-    <body>
-    Projects
-        <project class="projectbox">
-            <!-- Tempted to just use OOP and turn each project into an object and use DOM to dynamically get these boxes printed. -->
-                <div class="grid-item">DisGen: <br> A redistricting application that applies the shortest-splitline algorithm.
-                    Made remotely in a group of 6 people.<br>
-                    A group member and I implemented the database by parsing large JSON files that fed the openstreetmaps API the coordinates of the states we were working on. 
-                </div>
-                    <img class="imgdisgen" src="img/disgen.png">
-                        <br>Technologies applied:
-                        <div class="grid-item">HTML/CSS</div>
-                        <div class="grid-item">JavaScript</div>
-                        <div class="grid-item">JSON</div>
-                        <div class="grid-item">MySQL</div>
-                        <div class="grid-item">OpenStreetMap API</div>
-                        <div class="grid-item">Python</div>
-                        <div class="grid-item">React</div>
-            </project>   
-        <!-- End DisGen section -->
-
-        <project class="projectbox">
-                <div class="grid-item">VST Synthesizer: <br>A very simple digital synthesizer that can be used with a DAW that can run VSTs.
-                </div>
-                <img class="imgfirstplugin" src="img/firstplugin.png">
-                <br>Technologies applied:
-                <div class="grid-item">C++</div>
-                <div class="grid-item">JUCE Framework</div>
-                <div class="grid-item">Maximilian library</div>
-            <!-- </div>  -->
-        </project>
-    <!-- End VST synth section -->
-        
-
-        <project class="projectbox">
-
-                <div class="grid-item">Pokemon Battle: <br>This is a game made remotely in a team of 5.
-                    I implemented the battle system and database retrieval and sending for dealing with data before and after a battle.
-                    </div>
-                <img class="imgpokemon" src="img/pokemon.png">
-                <br>Technologies applied:
-                <div class="grid-item">AJAX</div>
-                <div class="grid-item">Apache</div>
-                <div class="grid-item">HTML/CSS</div>
-                <div class="grid-item">JavaScript</div>
-                <div class="grid-item">JSON</div>
-                <div class="grid-item">XAMPP</div>
-                <div class="grid-item">PHP</div>
-                <div class="grid-item">MySQL/MariaDB</div>
-        </project>
-        <!-- End Pokemon section -->
-
+    <body onload="main()">
         <br>
+        <span class="label">Projects:</span>
+        <br>
+            <projects id="projects" >
+                <script src="projects.js"></script>
 
-
-        <script src="portfolio.js"></script>
-        <footer>
-            <address id="contact" style="color: black;">
-                <div id="email">
-                    Email me at
-                    <a href="mailto:sulysse1@umbc.edu">sulysse1@umbc.edu</a>
-                </div>
-                <div id="phone">
-                    Call me at
-                    <a href="tel:2404418684">(240) 441-8684</a>
-                </div>
-                <p>
-                    Thank you for your time!
-                </p>
-            </address>
-        </footer>
-    </body>
-
+            </body>
+        </projects>
+    <footer>
+    <address id="contact">
+        If you have any questions,
+        <div id="email">
+            Email me at
+            <a href="mailto:sulysse1@umbc.edu">sulysse1@umbc.edu</a>
+        </div>
+        <div id="phone">
+            Call me at
+            <a href="tel:2404418684">(240) 441-8684</a>
+        </div>
+        <p>
+            Thank you for your time!
+        </p>
+    </address>
+</footer>
 </html>
