@@ -1,7 +1,7 @@
 .theme
 {
     /*These two go together.*/
-    background-image: url("img/background.gif");
+    /* background-image: url("img/background.gif"); */
     background-size: cover;
     color: white;
     background-color: #2C2F33;    
@@ -131,7 +131,12 @@
 
 #contact
 {
-    border: solid;
-    border-color: white;
     background-color: black;
+    align-items: center;
+    color: white;
+    font-size: smaller;
+    border-style: ridge;
+    border-radius: 8px;
+    border-color: black;
+
 }

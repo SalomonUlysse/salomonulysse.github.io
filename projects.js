@@ -1,3 +1,15 @@
+function includeLink(link)
+{
+    //These three lines do this basically:
+    //<script type="text/javascript" src=link></script>
+    var include=document.createElement("script");
+    include.type="text/javascript";
+    include.src=link;
+    //This includes actually puts the cdn in the html that calls this file. 
+    document.getElementsByTagName("footer")[0].appendChild(include);
+}
+var gsapLink="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js";
+
 class Project
 {
     constructor(projectTitle,projectClass,image,technologiesUsed,projectDescription)
@@ -11,8 +23,67 @@ class Project
 
 }; //End Move defn.
 
+function animate(elem)
+{
+    gsap.to(elem,gsap.utils.random(5,10),
+    {
+        y: height,
+        ease: "none",
+        repeat: -1,
+        delay:10
+    });
+
+
+    gsap.to(elem,gsap.utils.random(1,6),
+    {
+        x: "+=50",
+        ease: "power1.inOut",
+        repeat: -1,
+        yoyo:true
+    });
+
+    gsap.to(elem,gsap.utils.random(1,6),
+    {
+        opacity: "8",
+        ease: "power1.inOut",
+        repeat: -1,
+        yoyo:true
+    });
+}
+
 function main()
 {
+
+    // includeLink(gsapLink);
+    // var count=100,
+    // particleClass="particle",
+    // particleColors=["#ffffff","#000000","#fabc01","#fbca2f"],
+    // theme=document.getElementsByClassName("theme")[0],
+    // width=theme.offsetWidth,
+    // height=theme.offsetHeight,
+    // elem;
+
+    //For figuring out gsap
+
+    // for(var i=0;i<count;i++)
+    // {
+    //     //Create a div
+    //     elem=document.createElement("div");
+    //     elem.className=particleClass;
+    //     theme.appendChild(elem);
+    //     gsap.set(elem,
+    //     {
+    //         x: gsap.utils.random(0,width),
+    //         y: gsap.utils.random(0,height)-(height*0.5),
+    //         scale: gsap.utils.random(0,5,1),
+    //         backgroundColor:gsap.utils.random(particleColors)
+    //     });
+    //     //animate(elem);
+
+    // }
+
+   
+
     var projectTitles=
     [
         "DisGen",
