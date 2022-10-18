@@ -14,6 +14,7 @@ class Project
 {
     constructor(projectTitle,projectClass,image,technologiesUsed,projectDescription)
     { 
+        //Setting the instantiated object to whatever the variable is pointing to.
         this.projectTitle=projectTitle;
         this.projectClass=projectClass;
         this.image=image;
@@ -95,7 +96,9 @@ function main()
         "Multi-threaded Linux Kernel Mailbox System",
         "Health Monitor GUI/UX",
         "FM Synthesizer",
-        "Node.js Group Chat"/*,
+        "Node.js Group Chat",
+        "Bug Tracker"
+        /*,
         //Maybe turn the Node.js chat into a little social network clone?? Maybe use Django?
         "Multithreaded chat system",
         "NES Emulator"*/
@@ -114,6 +117,7 @@ function main()
         "img/monitor.png",
         "img/fm.png",
         "img/nodechat.png",
+        "img/memory.png",
         "img/cchat.png",
         "img/nes.png"
     ];
@@ -121,7 +125,7 @@ function main()
     var technologiesUsed=
     [
         /* DisGen*/
-        ["HTML/CSS","JavaScript","JSON","MySQL","OpenStreetMap API","Python","React"],
+        ["HTML/CSS","JavaScript","JSON","MySQL","OpenStreetMap API","Python","React.js"],
         /*VST Synthesizer*/
         ["C++","JUCE Framework","Maximilian Audio library"],
         /*Pokemon Battle*/
@@ -133,13 +137,15 @@ function main()
         /*CHIP-8 Emulator*/
         ["C++","SDL"],
         /*Multi-threaded Linux Kernel Mailbox System*/
-        ["C","POSIX","VirtualBox","Linux"],
+        ["C","Python","POSIX","VirtualBox","Linux"],
         /*Health Monitor GUI/UX*/
         ["Bootstrap","HTML/CSS","JavaScript","JSON","Canvas","jQuery"],
         /*FM Synthesizer*/
         ["C++","OpenFrameWorks","Maximilian Audio library"],
         /*Node.js Group Chat System*/ 
         ["Node.js","Express.js","Socket.io","HTML/CSS","Embedded JavaScript","JavaScript","jQuery"/*,"MySQL"*/],
+        /*Bug tracker*/
+        ["C#",".NET Framework","ASP.NET Core","HTML/CSS","JavaScript","React.js"],
         /*Multithreaded chat system*/
         ["C","",""],
         /*NES Emulator*/
@@ -160,6 +166,7 @@ function main()
         "imgmonitor",
         "imgfm",
         "imgnodechat",
+        "imgmemory",
         "imgcchat",
         "imgnes"
 
@@ -182,8 +189,9 @@ function main()
         /*8.*/ "An interactive GUI/UX for a digital health monitor made remotely in a team of 3. I implemented the overall layout.",
         /*9.*/ "A frequency modulation synthesizer that applies more advanced DSP that may be used with a DAW. More features will be added.",
         /*10.*/ "A chat system made in Node.js. More backend features will be added in the future. "+sources+" <a target =\"blank\" href=\"https://itnext.io/build-a-group-chat-app-in-30-lines-using-node-js-15bfe7a2417b\"><br> Reference 1<br></a>",
-        /*11. */"A multithreaded chat system that implements socket logic.",
-        /*12.*/"An NES Emulator. <br><br> "+sources+ " <a target=\"_blank\"href=\"https://wiki.nesdev.com/w/index.php/Nesdev\">Reference 1</a> <br><br> <a target=\"_blank\"href=\"https://yizhang82.dev/nes-emu-overview\">Reference 2</a> <br>" 
+        /*11.*/ "A bug tracking system that specializes in memory leaks in C and C++.",
+        /*12. */"A multithreaded chat system that implements socket logic.",
+        /*13.*/"An NES Emulator. <br><br> "+sources+ " <a target=\"_blank\"href=\"https://wiki.nesdev.com/w/index.php/Nesdev\">Reference 1</a> <br><br> <a target=\"_blank\"href=\"https://yizhang82.dev/nes-emu-overview\">Reference 2</a> <br>" 
     ];
     
     for(i=0;i<numProjects;i++)
@@ -198,8 +206,8 @@ function main()
     var technologiesUsedString=stringInit;
     printProjects=document.getElementById("projects");
     printProjects.innerHTML+=""; //Just initializing
-
-    for(i=0;i<projects.length;i++)
+    
+    for(i=(projects.length-1);i>0;i--)
     {
         //So I need to calculate this first, and then make one huge appended string for the HTML.
         for(j=0;j<projects[i].technologiesUsed.length;j++)
