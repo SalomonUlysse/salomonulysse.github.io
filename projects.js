@@ -97,7 +97,7 @@ function main()
         "Health Monitor GUI/UX",
         "FM Synthesizer",
         "Node.js Group Chat",
-        "Bug Tracker"
+        //"Bug Tracker"
         /*,
         //Maybe turn the Node.js chat into a little social network clone?? Maybe use Django?
         "Multithreaded chat system",
